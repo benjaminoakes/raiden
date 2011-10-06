@@ -15,7 +15,7 @@ This is based on a project I made for a Computational Linguistics course at the 
 Raiden is my re-do, but is much less functional (although still useful).  The name comes from Final Fantasy VI, where Raiden is an upgrade of the esper Odin.
 
   [oden]: http://cs.uiowa.edu/~oden
-  [odin]: https://github.com/benjaminoakes/raiden
+  [odin]: https://github.com/benjaminoakes/odin
 
 Resources
 ---------
