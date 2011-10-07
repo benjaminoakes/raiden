@@ -7,6 +7,52 @@ Raiden is a simple **ATN** (Augmented Transition Network) parser for natural lan
 
 If interested, please become a watcher.
 
+Usage
+-----
+
+There's no frontend, just the underlying ATN backend.  Example:
+
+    push(:noun_phrase, position, registers, :into => :object_of_preposition, :next => :prepositional_phrase__noun_phrase)
+
+Contributing
+------------
+
+Running `rake` in the root of this directory will run the unit tests.  I've left a sample parse of the nonsensical sentence 'the monster in the man grows avocados in the street' uncommented so that you can see some output.  You should receive this at the command prompt:
+
+    :sentence
+        :noun_phrase
+            :determiner
+            "the"
+            :noun
+            "monster"
+            :prepositional_phrase
+                :preposition
+                "in"
+                :noun_phrase
+                    :determiner
+                    "the"
+                    :noun
+                    "man"
+        :verb
+        "grows"
+        :noun_phrase
+            :noun
+            "avocados"
+            :prepositional_phrase
+                :preposition
+                "in"
+                :noun_phrase
+                    :determiner
+                    "the"
+                    :noun
+                    "street"
+
+The vocabulary of this ATN is quite limited -- see `string.rb`.  I have more in-depth categorization routines in [Odin][].  I haven't added them here yet -- it would have only taken longer.  Also, the grammar the ATN represents isn't too entirely complicated.  I spent most of my time paring the former code down so that it could be manageable.  At the moment, only noun phrases, prepositional phrases, verb phrases, and (of course) sentences are defined.  The important part is that it handles non-determinism gracefully.
+
+Also of note, the ATN computes the deep structure of passive sentences.  For example, it can figure this out:
+
+    %w{the old cookie was eaten by the monster} -> "the monster ate the old cookie"
+
 History
 -------
 
