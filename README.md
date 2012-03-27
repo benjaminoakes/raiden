@@ -1,6 +1,8 @@
 Raiden
 ======
 
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=benjaminoakes&url=https://github.com/benjaminoakes/raiden&title=Raiden&language=en_GB&tags=github&category=software)
+
 ![Raiden Esper from Final Fantasy VI](https://github.com/benjaminoakes/raiden/raw/master/images/raiden-ff6.gif)
 
 Raiden is a simple **ATN** (Augmented Transition Network) parser for natural languages with basic part of speech tagging and word-sense disambiguation.  Currently, the only supported language is English, but other languages can be added.
